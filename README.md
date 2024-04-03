@@ -8,3 +8,4 @@ Solved problems:
 - [Add Two Numbers](/c/add-two-numbers/main.c) _(solved using c)_
 - [Longest Substring Without Repeating Characters](/golang/longest-substring/main.g) _(solved using golang)_
 - [Median Of Two Sorted Arrays](/c/median-of-two-sorted-arrays/main.c) _(solved using c)_
+- [Longest Palindromic Substring](/python/longest-palindromic-substring/main.py) _(solved using python)_
