@@ -1,9 +1,27 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
 
 double findMedianSortedArrays(int *nums1, int nums1Size, int *nums2,
                               int nums2Size) {
+    // Check if either nums1 or nums2 has size zero
+    if (nums1Size == 0 && nums2Size == 0) {
+        return 0.0;
+    } else if (nums1Size == 0) {
+        if (nums2Size % 2 != 0) {
+            return nums2[nums2Size / 2];
+        } else {
+            return (double)(nums2[nums2Size / 2] + nums2[nums2Size / 2 - 1]) /
+                   2;
+        }
+    } else if (nums2Size == 0) {
+        if (nums1Size % 2 != 0) {
+            return nums1[nums1Size / 2];
+        } else {
+            return (double)(nums1[nums1Size / 2] + nums1[nums1Size / 2 - 1]) /
+                   2;
+        }
+    }
+
     int newSize = nums1Size + nums2Size;
     int newNums[newSize];
 
@@ -35,13 +53,13 @@ double findMedianSortedArrays(int *nums1, int nums1Size, int *nums2,
 
 int main() {
     int nums1[2] = {1, 3};
-    int nums2[2] = {2, 4};
+    int nums2[1] = {2};
 
     clock_t start, end;
     double cpu_time_used;
 
     start = clock();
-    double median = findMedianSortedArrays(nums1, 2, nums2, 2);
+    double median = findMedianSortedArrays(nums1, 0, nums2, 1);
     end = clock();
     cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
     printf("median=%f, time used: %f ms\n", median, cpu_time_used * 1000);
