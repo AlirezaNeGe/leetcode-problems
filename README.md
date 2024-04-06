@@ -9,3 +9,4 @@ Solved problems:
 - [Longest Substring Without Repeating Characters](/golang/longest-substring/main.g) _(solved using golang)_
 - [Median Of Two Sorted Arrays](/c/median-of-two-sorted-arrays/main.c) _(solved using c)_
 - [Longest Palindromic Substring](/python/longest-palindromic-substring/main.py) _(solved using python)_
+- [Reverse Integer](/c/reverse-integer/main.c) _(solved using c)_
