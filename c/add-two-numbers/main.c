@@ -36,6 +36,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
         tail = tail->next;
     }
 
+    free(tail);
     return result->next;
 }
 
@@ -60,6 +61,7 @@ int main() {
 
     struct ListNode *result = addTwoNumbers(head1, head2);
     printf("result = %d\n", result->val);
+    free(result);
 
     return 0;
 }
