@@ -1,3 +1,3 @@
 module github.com/AlirezaNeGe/leetcode-problems
 
-go 1.21.4
+go 1.22
