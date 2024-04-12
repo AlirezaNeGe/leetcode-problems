@@ -1,13 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+	"time"
+)
 
 func convert(s string, numRows int) string {
 	numZag := numRows - 2
 	rowsMap := make(map[int][]rune, numRows)
 	sLength := len(s)
 	i := 0
-	newString := ""
 
 	l := 0
 	for l < sLength {
@@ -26,17 +29,22 @@ func convert(s string, numRows int) string {
 			i = 0
 		}
 	}
+	newString := strings.Builder{}
 
 	for i = 0; i < numRows; i++ {
 		for _, c := range rowsMap[i] {
-			newString += string(c)
+			_, _ = newString.WriteString(string(c))
 		}
 	}
 
-	return newString
+	return newString.String()
 }
 
 func main() {
+	now := time.Now()
 	result := convert("PAYPALISHIRING", 4)
-	fmt.Println(result)
+	end := time.Since(now)
+	fmt.Println("time: ", end)
+	fmt.Println("result: ", result)
+
 }
