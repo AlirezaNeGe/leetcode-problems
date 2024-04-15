@@ -16,3 +16,4 @@ Solved problems:
 - [ZigZag Conversion](/golang/zigzag-conversion/main.go) _(solved using go)_
 - [Integer to Roman](/python/integer-to-roman/main.py) _(solved using python)_
 - [Roman to Integer](/python/roman-to-integer/main.py) _(solved using python)_
+- [Longest Common Prefix](/golang/longest-common-prefix/main.go) _(solved using go)_
