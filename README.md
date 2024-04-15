@@ -15,3 +15,4 @@ Solved problems:
 - [Container With Most Water](/c/container-with-most-water/main.c) _(solved using c)_
 - [ZigZag Conversion](/golang/zigzag-conversion/main.go) _(solved using go)_
 - [Integer to Roman](/python/integer-to-roman/main.py) _(solved using python)_
+- [Roman to Integer](/python/roman-to-integer/main.py) _(solved using python)_
