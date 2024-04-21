@@ -18,3 +18,4 @@ Solved problems:
 - [Roman to Integer](/python/roman-to-integer/main.py) _(solved using python)_
 - [Longest Common Prefix](/golang/longest-common-prefix/main.go) _(solved using go)_
 - [3Sum](/golang/3-sum/main.go) _(solved using go)_
+- [3Sum Closest](/c/3sum-closest/main.c) _(solved using c)_
