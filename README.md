@@ -19,3 +19,4 @@ Solved problems:
 - [Longest Common Prefix](/golang/longest-common-prefix/main.go) _(solved using go)_
 - [3Sum](/golang/3-sum/main.go) _(solved using go)_
 - [3Sum Closest](/c/3sum-closest/main.c) _(solved using c)_
+- [Letter Combinatios of a Phone Number](/golang/letter-combinations-of-a-phone-number/main.go) _(solved using go)_
