@@ -5,31 +5,7 @@ import (
 	"sort"
 )
 
-func combineSlice(nums []int, k int) [][]int {
-	var result [][]int
-	var backtrack func(start int, curr []int)
-
-	backtrack = func(start int, curr []int) {
-		if len(curr) == k {
-			tmp := make([]int, len(curr))
-			copy(tmp, curr)
-			result = append(result, tmp)
-			return
-		}
-
-		for i := start; i < len(nums); i++ {
-			curr = append(curr, nums[i])
-			backtrack(i+1, curr)
-			curr = curr[:len(curr)-1]
-		}
-	}
-
-	backtrack(0, []int{})
-	return result
-}
-
 func threeSum(nums []int) [][]int {
-
 	var combinations [][]int
 	var backtrack func(start int, curr []int)
 
@@ -93,8 +69,43 @@ func threeSum(nums []int) [][]int {
 	return triplets
 }
 
+func newThreeSum(nums []int) [][]int {
+	sort.Ints(nums)
+	numsLength := len(nums)
+	var triplets [][]int
+
+	for i := 0; i < numsLength; i++ {
+		next := i + 1
+		last := numsLength - 1
+
+		for next < last {
+			sum := nums[i] + nums[next] + nums[last]
+			if sum == 0 {
+				triplet := []int{nums[i], nums[next], nums[last]}
+				triplets = append(triplets, triplet)
+
+				// skip the duplicate
+				for next < last && nums[next] == triplet[1] {
+					next++
+				}
+				for next < last && nums[last] == triplet[2] {
+					last--
+				}
+			} else if sum < 0 {
+				next++
+			} else {
+				last--
+			}
+		}
+		for i+1 < numsLength && nums[i+1] == nums[i] {
+			i++
+		}
+	}
+	return triplets
+}
+
 func main() {
-	nums := []int{-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4}
-	result := threeSum(nums)
+	nums := []int{-1, 0, 1, 2, -1, -4}
+	result := newThreeSum(nums)
 	fmt.Println("result: ", result)
 }
