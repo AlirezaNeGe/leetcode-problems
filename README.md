@@ -22,3 +22,4 @@ Solved problems:
 - [Letter Combinatios of a Phone Number](/golang/letter-combinations-of-a-phone-number/main.go) _(solved using go)_
 - [4Sum](/golang/4-sum/main.go) _(solved using go)_
 - [Remove Nth Node From End of List](/c/remove-nth-node-from-end-of-list/main.c) _(solved using c)_
+- [Valid Parentheses](/golang/valid-parentheses/main.go) _(solved using go)_
