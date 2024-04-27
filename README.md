@@ -23,3 +23,4 @@ Solved problems:
 - [4Sum](/golang/4-sum/main.go) _(solved using go)_
 - [Remove Nth Node From End of List](/c/remove-nth-node-from-end-of-list/main.c) _(solved using c)_
 - [Valid Parentheses](/golang/valid-parentheses/main.go) _(solved using go)_
+- [Merge Two Sorted Lists](/c/merge-two-sorted-lists/main.c) _(solved using c)_
