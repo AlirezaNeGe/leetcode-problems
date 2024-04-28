@@ -24,3 +24,4 @@ Solved problems:
 - [Remove Nth Node From End of List](/c/remove-nth-node-from-end-of-list/main.c) _(solved using c)_
 - [Valid Parentheses](/golang/valid-parentheses/main.go) _(solved using go)_
 - [Merge Two Sorted Lists](/c/merge-two-sorted-lists/main.c) _(solved using c)_
+- [Generate Parenthese](/golang/generate-parenthese/main.go) _(solved using go)_
