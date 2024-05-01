@@ -25,3 +25,4 @@ Solved problems:
 - [Valid Parentheses](/golang/valid-parentheses/main.go) _(solved using go)_
 - [Merge Two Sorted Lists](/c/merge-two-sorted-lists/main.c) _(solved using c)_
 - [Generate Parenthese](/golang/generate-parenthese/main.go) _(solved using go)_
+- [Merge K Sorted Lists](/golang/merge-k-sorted-lists/main.go) _(solved using go)_
