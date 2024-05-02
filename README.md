@@ -26,3 +26,4 @@ Solved problems:
 - [Merge Two Sorted Lists](/c/merge-two-sorted-lists/main.c) _(solved using c)_
 - [Generate Parenthese](/golang/generate-parenthese/main.go) _(solved using go)_
 - [Merge K Sorted Lists](/golang/merge-k-sorted-lists/main.go) _(solved using go)_
+- [Swap Nodes in Pairs](/c/swap-nodes-in-pairs/main.c) _(solved using c)_
