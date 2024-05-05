@@ -27,3 +27,4 @@ Solved problems:
 - [Generate Parenthese](/golang/generate-parenthese/main.go) _(solved using go)_
 - [Merge K Sorted Lists](/golang/merge-k-sorted-lists/main.go) _(solved using go)_
 - [Swap Nodes in Pairs](/c/swap-nodes-in-pairs/main.c) _(solved using c)_
+- [Remove Duplicates from Sorted Array](/golang/merge-k-sorted-lists/main.go) _(solved using go)_
