@@ -28,3 +28,4 @@ Solved problems:
 - [Merge K Sorted Lists](/golang/merge-k-sorted-lists/main.go) _(solved using go)_
 - [Swap Nodes in Pairs](/c/swap-nodes-in-pairs/main.c) _(solved using c)_
 - [Remove Duplicates from Sorted Array](/golang/merge-k-sorted-lists/main.go) _(solved using go)_
+- [Remove Element](/c/remove-element/main.c) _(solved using c)_
