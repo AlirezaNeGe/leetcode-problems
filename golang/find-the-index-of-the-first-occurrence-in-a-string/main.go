@@ -8,10 +8,6 @@ func strStr(haystack string, needle string) int {
 	firstChar := needle[0]
 	for i, r := range haystack {
 		if r == rune(firstChar) {
-			if haystackLength == 1 {
-				return i
-			}
-
 			if i+needleLength <= haystackLength && haystack[i:i+needleLength] == needle {
 				return i
 			}
