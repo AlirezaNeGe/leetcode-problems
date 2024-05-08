@@ -22,4 +22,3 @@ func main() {
 	result := strStr(haystack, needle)
 	fmt.Println("result: ", result)
 }
-
