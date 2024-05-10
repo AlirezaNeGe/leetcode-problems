@@ -31,3 +31,4 @@ Solved problems:
 - [Remove Element](/c/remove-element/main.c) _(solved using c)_
 - [Find the Index of the First Occurrence in a String](/golang/find-the-index-of-the-first-occurrence-in-a-string/main.go) _(solved using go)_
 - [Divide Two Integers](/golang/find-the-index-of-the-first-occurrence-in-a-string/main.go) _(solved using go)_
+- [Substring with Concatenation of All Words](/golang/substring-with-concatenation-of-all-words/main.go) _(solved using go)_

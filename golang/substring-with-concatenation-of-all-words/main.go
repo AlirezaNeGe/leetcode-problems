@@ -2,8 +2,23 @@ package main
 
 import (
 	"fmt"
-	"regexp"
 )
+
+func strStr(haystack string, needle string) []int {
+	var indices []int
+	needleLength := len(needle)
+	haystackLength := len(haystack)
+	firstChar := needle[0]
+	for i, r := range haystack {
+		if r == rune(firstChar) {
+			if i+needleLength <= haystackLength && haystack[i:i+needleLength] == needle {
+				// return i
+				indices = append(indices, i)
+			}
+		}
+	}
+	return indices
+}
 
 func generatePermutations(arr []string, start, end int, permutations *[]string) []string {
 	if start == end {
@@ -29,12 +44,13 @@ func findSubstring(s string, words []string) []int {
 	permutaitons := generatePermutations(words, 0, len(words)-1, &permutations)
 	for _, p := range permutaitons {
 		fmt.Println("p:", p)
-		re := regexp.MustCompile(p)
-		index := re.FindAllIndex([]byte(s), -1)
+		// re := regexp.MustCompile(p)
+		// index := re.FindAllIndex([]byte(s), -1)
+		index := strStr(s, p)
 		for _, i := range index {
-			if _, ok := uniqueIndices[i[0]]; !ok {
-				indices = append(indices, i[0])
-				uniqueIndices[i[0]] = struct{}{}
+			if _, ok := uniqueIndices[i]; !ok {
+				indices = append(indices, i)
+				uniqueIndices[i] = struct{}{}
 			}
 		}
 	}
@@ -42,8 +58,8 @@ func findSubstring(s string, words []string) []int {
 }
 
 func main() {
-	words := []string{"a", "a"}
-	s := "aaa"
+	words := []string{"foo", "bar"}
+	s := "barfoothefoobarman"
 	result := findSubstring(s, words)
 	fmt.Println("permutations: ", result)
 }
