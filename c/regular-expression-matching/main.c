@@ -3,39 +3,25 @@
 
 bool isMatch(char *s, char *p);
 bool matchhere(char *s, char *p);
-bool matchstar(int c, char *s, char *p);
 
-bool isMatch(char *s, char *p) {
-    do {
-        if (!matchhere(s, p)) {
-            printf("1. s=%s, p=%s\n", s, p);
-            return false;
-        }
-    } while (*s++ != '\0');
-    return true;
-}
+bool isMatch(char *s, char *p) { return matchhere(s, p); }
 
 bool matchhere(char *s, char *p) {
-    if (p[0] == '\0')
-        return true;
-    if (p[1] == '*') {
-        // printf("2. s=%s, p=%s, p[0]=%c\n", s, p + 2, p[0]);
-        return matchstar(p[0], s, p + 2);
+    if (p[0] == '\0') {
+        return *s == '\0';
     }
-    if (*s != '\0' && (p[0] == '.' || p[0] == *s)) {
-        return matchhere(s + 1, p + 1);
-    }
-    return false;
-}
 
-bool matchstar(int c, char *s, char *p) {
-    do {
-        if (!matchhere(s, p)) {
-            printf("false, s=%s, p=%s\n", s, p);
-            return false;
-        }
-    } while (*s != '\0' && (*s++ == c || c == '.'));
-    return true;
+    if (p[1] == '*') {
+        if (matchhere(s, p + 2))
+            return 1;
+        while (*s != '\0' && (*s++ == p[0] || p[0] == '.'))
+            if (matchhere(s, p + 2))
+                return 1;
+    } else if (*s != '\0' && (p[0] == '.' || p[0] == *s) &&
+               matchhere(s + 1, p + 1)) {
+        return 1;
+    }
+    return 0;
 }
 
 int main() {
