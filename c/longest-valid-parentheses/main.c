@@ -12,23 +12,26 @@ int longestValidParentheses(char *s) {
     while (i < sLen) {
         if (s[i] == '(') {
             p[j] = s[i];
-            printf("1. p[%d]=%c\n", j, p[j]);
+            printf("1. s[%d]=%c, p[%d]=%c\n", i, s[i], j, p[j]);
             j++;
         } else if (s[i] == ')' && j > 0 && p[j - 1] == '(') {
             maxLen++;
-            printf("2. p[%d]=%c\n", j, p[j]);
-        } else if (s[i] == ')' && j > 0 && p[j - 1] != '(')
-            maxLen--;
+            printf("2. s[%d]=%c, p[%d]=%c, maxLen=%d\n", i, s[i], j, p[j],
+                   maxLen);
+            p[j--] = ' ';
+        }
+        // else if (s[i] == ')' && j > 0 && p[j - 1] != '(') {
+        //     printf("3. p[%d]=%c, maxLen=%d\n", j, p[j], maxLen);
+        //     maxLen--;
+        // }
         i++;
     }
 
-    // printf("maxLen=%d\n", maxLen * 2);
-    // printf("sLen=%d\n", sLen);
     return maxLen * 2;
 }
 
 int main() {
-    char *s = ")()())";
+    char *s = "()(()";
     // char *s = "";
     int result = longestValidParentheses(s);
     printf("result: %d\n", result);
